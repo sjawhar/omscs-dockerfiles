@@ -1,0 +1,6 @@
+FROM jupyter/scipy-notebook:82b978b3ceeb
+
+RUN conda install --quiet --yes -n python2 -c menpo opencv \
+	# Reinstalling matplotlib to get around libpng compatibility issue
+	&& pip2 uninstall matplotlib -y \
+	&& pip2 install matplotlib

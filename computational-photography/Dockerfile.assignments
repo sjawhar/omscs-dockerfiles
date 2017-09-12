@@ -1,0 +1,59 @@
+FROM ubuntu:14.04
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+
+RUN apt-get update && apt-get install -y \
+        apt-xapian-index \
+        cloud-init \
+        cmake \
+        gcc \
+        gir1.2-gtk-3.0 \
+        git \
+        ipython-notebook \
+        ipython \
+        landscape-client \
+        libboost-dev \
+        libfreetype6-dev \
+        libssl-dev \
+        libx11-dev \
+        opencv-data \
+        pkg-config \
+        python-apport \
+        python-apt \
+        python-chardet \
+        python-crypto \
+        python-dbus \
+        python-dbus-dev \
+        python-debian \
+        python-gi \
+        python-gi-cairo \
+        python-imaging \
+        python-keyring \
+        python-launchpadlib \
+        python-lazr.restfulclient \
+        python-matplotlib \
+        python-nose \
+        python-numpy \
+        python-opencv \
+        python-pam \
+        python-pandas \
+        python-pip \
+        python-problem-report \
+        python-pyexiv2 \
+        python-pyexiv2-doc \
+        python-pyproj \
+        python-scipy \
+        python-secretstorage \
+        python-sympy \
+        python-twisted-core \
+        python-twisted-names \
+        python-twisted-web \
+        zip \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --upgrade pip
+
+COPY requirements.txt /src/
+RUN pip install -r /src/requirements.txt
+
+COPY setup.py submit.py /src/omscs/
+RUN pip install -e /src/omscs/

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  labs:
+    build: .
+    image: sjawhar/omscs-cse6220
+    container_name: omscs-cse6220-labs
+    volumes:
+      - "./:/lab"
+    tty: true
+    command: ["/bin/bash"]

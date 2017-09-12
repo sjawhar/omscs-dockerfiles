@@ -1,0 +1,21 @@
+version: '3'
+services:
+  notebook:
+    build:
+      context: .
+      dockerfile: Dockerfile.assignments
+    image: sjawhar/omscs-cs6475-assignments
+    container_name: omscs-cs6475-assignments
+    volumes:
+      - "./:/omscs"
+    ports:
+      - "8888"
+    command:
+      - "jupyter"
+      - "notebook"
+      - "--notebook-dir=/omscs"
+      - "--ip='*'"
+      - "--port=8888"
+      - "--no-browser"
+      - "--allow-root"
+      - "--NotebookApp.token=''"
