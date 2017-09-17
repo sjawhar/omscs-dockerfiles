@@ -2,8 +2,8 @@ version: '3'
 services:
   labs:
     build: .
-    image: sjawhar/omscs-cse6220
-    container_name: omscs-cse6220-labs
+    image: sjawhar/omscs-hpc
+    container_name: omscs-hpc-labs
     volumes:
       - "./:/lab"
     tty: true

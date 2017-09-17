@@ -4,8 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.labs
-    image: sjawhar/omscs-cs6475-labs
-    container_name: omscs-cs6475-labs
+    image: sjawhar/omscs-cp-labs
+    container_name: omscs-cp-labs
     volumes:
       - "./:/home/jovyan/work"
     ports:

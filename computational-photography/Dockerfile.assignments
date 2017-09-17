@@ -57,3 +57,6 @@ RUN pip install -r /src/requirements.txt
 
 COPY setup.py submit.py /src/omscs/
 RUN pip install -e /src/omscs/
+
+WORKDIR /omscs
+ENTRYPOINT ["jupyter","notebook","--notebook-dir=/omscs","--ip='*'","--port=8888","--no-browser","--allow-root"]
