@@ -3,8 +3,11 @@ services:
   labs:
     build: .
     image: sjawhar/omscs-hpc
-    container_name: omscs-hpc-labs
+    container_name: omscs-hpc
     volumes:
-      - "./:/lab"
+      - "./:/omscs"
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+    environment:
+      - "DISPLAY=10.0.75.1:0"
     tty: true
     command: ["/bin/bash"]

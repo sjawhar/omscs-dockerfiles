@@ -35,3 +35,4 @@ RUN pip install \
     pyopenssl
 
 ENV SHELL /bin/bash
+WORKDIR /omscs
