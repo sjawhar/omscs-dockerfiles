@@ -1,0 +1,16 @@
+version: '3'
+services:
+  debugger:
+    build:
+      context: .
+      dockerfile: debugger.Dockerfile
+    image: sjawhar/omscs-hpc-debugger
+    container_name: omscs-hpc-debugger
+    volumes:
+      - "./:/root/omscs"
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+    environment:
+      - "DISPLAY=10.0.75.1:0"
+    tty: true
+    privileged: true
+    command: ["bash"]
