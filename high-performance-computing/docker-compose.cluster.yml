@@ -14,7 +14,7 @@ services:
     command: ["/bin/bash"]
 
   slave:
-    image: sjawhar/omscs-hpc-slave
+    image: sjawhar/omscs-hpc:slave
     volumes:
       - "ssh_keys:/root/.ssh"
       - "./:/omscs"
