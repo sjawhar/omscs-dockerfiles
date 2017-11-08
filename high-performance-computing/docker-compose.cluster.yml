@@ -1,0 +1,27 @@
+version: '3'
+services:
+  master:
+    image: sjawhar/omscs-hpc
+    volumes:
+      - "./:/omscs"
+      - "/tmp/.X11-unix:/tmp/.X11-unix"
+    volumes:
+      - "ssh_keys:/root/.ssh"
+      - "./:/omscs"
+    environment:
+      - "DISPLAY=10.0.75.1:0"
+    tty: true
+    command: ["/bin/bash"]
+
+  slave:
+    image: sjawhar/omscs-hpc-slave
+    volumes:
+      - "ssh_keys:/root/.ssh"
+      - "./:/omscs"
+    expose:
+      - "22"
+    command: ["/usr/sbin/sshd", "-D"]
+    restart: always
+
+volumes:
+  ssh_keys: {}
