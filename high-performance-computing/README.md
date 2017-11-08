@@ -11,6 +11,6 @@ docker-compose -f docker-compose.cluster.yml --project-name hpc up --scale slave
 Now `docker exec -it hpc_master_1 bash` and run
 `ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa`.
 
-OK, you're all set up. Just add `--hostfile /omscs/mpi-hosts` to your `mpirun` commands and they will run on the slaves.
+OK, you're all set up. Run `mpirun` inside the master container by `exec`ing into it as shown above. Just add `--hostfile /omscs/mpi-hosts` to your `mpirun` commands and they will run on the slaves.
 
 If you're on a Windows machine and you get a hostfile formatting error when running `mpirun`, you need to make sure to remove carriage returns from `mpi-hosts`.
