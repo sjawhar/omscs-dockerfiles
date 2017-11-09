@@ -8,8 +8,13 @@ cd $HPC_ASSIGNMENT_DIRECTORY
 docker-compose -f docker-compose.cluster.yml --project-name hpc up --scale slave=4
 ```
 
-Now `docker exec -it hpc_master_1 bash` and run
-`ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa`.
+Now `docker exec -it hpc_master_1 bash` and run:
+```bash
+ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa
+cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+```
+
+Finally, try `ssh`ing into each of the slaves (`ssh hpc_slave_1`, etc.) to add the host key to the known_hosts and make sure everything is working.
 
 OK, you're all set up. Run `mpirun` inside the master container by `exec`ing into it as shown above. Just add `--hostfile /omscs/mpi-hosts` to your `mpirun` commands and they will run on the slaves.
 
