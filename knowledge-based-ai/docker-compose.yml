@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  agent:
+    build: .
+    image: sjawhar/kbai-rpm-runner
+    volumes:
+      - "./Project-Code-Python:/agent/src"
+    environment:
+      PORT: "80"
+      FILE: "src/RavensProject.py"
+      POLLING: "true"
+    ports:
+      - "80:80"
+      - "81:81"
