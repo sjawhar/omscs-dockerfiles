@@ -1,0 +1,16 @@
+version: '2.4'
+
+services:
+  default:
+    buid: .
+    image: cv_all_image
+    container_name: cv-${PROBLEM_SET}
+    environment:
+      DISPLAY: unix${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./${PROBLEM_SET}:/app
+      - ~/.nelson:/home/pset/.nelson
+    working_dir: /app
+    tty: true
+    command: [bash]
