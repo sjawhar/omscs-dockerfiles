@@ -1,0 +1,340 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"seco",
+				"secondaryParams"
+			],
+			[
+				"off",
+				"offOutput"
+			],
+			[
+				"secon",
+				"secondaryOutput"
+			],
+			[
+				"loca",
+				"localtime"
+			],
+			[
+				"DOCKER_",
+				"DOCKER_XSOCK"
+			],
+			[
+				"x1",
+				"X11-unix"
+			],
+			[
+				"apt-",
+				"apt-transport-https"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "muselsl/jupyter.Dockerfile",
+			"settings":
+			{
+				"buffer_size": 392,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "muselsl/Dockerfile",
+			"settings":
+			{
+				"buffer_size": 1087,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/sami/Code/dockerfiles",
+		"/home/sami/Code/dockerfiles/muselsl",
+		"/home/sami/Code/dockerfiles/omscs",
+		"/home/sami/Code/dockerfiles/omscs/computational-photography"
+	],
+	"file_history":
+	[
+		"/home/sami/Desktop/Recovery",
+		"/home/sami/Code/eeg-notebooks/notebooks/stimulus_presentation/go_nogo.py",
+		"/home/sami/Code/dockerfiles/muselsl/docker-compose.yaml",
+		"/home/sami/Code/dockerfiles/muselsl/Dockerfile",
+		"/chimera/dockerfuncs",
+		"/home/sami/Code/meditation-eeg/app/recprd.py",
+		"/chimera/setup_utils.sh",
+		"/home/sami/Code/dockerfiles/muselsl/conda.Dockerfile",
+		"/home/sami/Code/dockerfiles/muselsl/conda",
+		"/home/sami/Code/dockerfiles/muselsl/debian.Dockerfile",
+		"/chimera/display.sh",
+		"/home/sami/Desktop/test.sh",
+		"/home/sami/Code/dockerfiles/muselsl/conda.Dockerfile'",
+		"/home/sami/Desktop/Vegan Restaurants.txt",
+		"/home/sami/.local/share/applications/dkeepassxc.desktop",
+		"/chimera/dkeepassxc.sh",
+		"/chimera/dkeepass.sh",
+		"/home/sami/Code/dockerfiles/keepassxc/Dockerfile",
+		"/home/sami/.bash_history"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"todo",
+			"event.",
+			"core.",
+			"quit",
+			"core.",
+			"outlet",
+			"trial_clock",
+			"Outlet",
+			"outlet",
+			"Outlet",
+			"outlet",
+			"info",
+			"Info",
+			"info",
+			"respKeys",
+			"triggerKey",
+			"markernames",
+			"trialclock",
+			"globalclock",
+			"brave-browser",
+			" \\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "muselsl/jupyter.Dockerfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								51,
+								51
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "muselsl/Dockerfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1087,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								243,
+								243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "dockerfiles.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"muselsdo",
+				"muselsl/Dockerfile"
+			],
+			[
+				"muslsldockerf",
+				"muselsl/Dockerfile"
+			],
+			[
+				"jupyt",
+				"muselsl/jupyter.Dockerfile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Code/meditation-eeg/meditation-eeg.sublime-project"
+			],
+			[
+				"d",
+				"~/Code/dockerfiles/dockerfiles.sublime-project"
+			],
+			[
+				"mu",
+				"~/Code/meditation-eeg/meditation-eeg.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
