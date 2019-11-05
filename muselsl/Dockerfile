@@ -7,13 +7,16 @@ RUN apt-get update \
         python3 \
         python3-pyqt5 \
         python3-pyqt5.qtopengl \
+        sudo \
  && rm -rf /var/lib/apt/lists/* \
+ && FAKE_SYSTEMCTL="/usr/local/bin/systemctl" \
+ && echo '#!/bin/sh' > $FAKE_SYSTEMCTL \
+ && echo 'echo tried to call systemctl $@' >> $FAKE_SYSTEMCTL \
+ && chmod +x $FAKE_SYSTEMCTL \
  && setcap 'cap_net_raw,cap_net_admin+eip' `which hcitool` \
- && echo '#!/bin/sh' > /usr/local/bin/sudo \
- && echo 'echo $@' >> /usr/local/bin/sudo \
- && chmod +x /usr/local/bin/sudo
+ && echo "muselsl ALL=(ALL) NOPASSWD: `which hciconfig`, $FAKE_SYSTEMCTL" >> /etc/sudoers
 
-RUN DEV_PACKAGES="\
+RUN DEV_PACKAGES=" \
         build-essential \
         gfortran \
         libfreetype6-dev \
@@ -32,8 +35,7 @@ RUN DEV_PACKAGES="\
         vispy \
  && pip3 install \
         muselsl \
- && apt-get remove -y $DEV_PACKAGES \
- && apt-get autoremove -y \
+ && apt-get purge -y --auto-remove $DEV_PACKAGES \
  && rm -rf /var/lib/apt/lists/* \
  && rm -r /root/.cache
 
