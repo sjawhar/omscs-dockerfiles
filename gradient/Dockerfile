@@ -6,7 +6,7 @@ RUN apk add --no-cache --virtual build-dependencies \
         openssl-dev \
         python3-dev \
  && pip3 install --no-cache-dir \
-        gradient==0.6.0 \
+        gradient==0.7.0 \
  && apk del build-dependencies
 
 RUN adduser -D gradient
