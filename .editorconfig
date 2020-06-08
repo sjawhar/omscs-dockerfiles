@@ -1,0 +1,5 @@
+[Dockerfile]
+indent_size = 4
+
+[*.Dockerfile]
+indent_size = 4
