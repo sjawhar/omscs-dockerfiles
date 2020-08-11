@@ -1,7 +1,11 @@
-FROM python:3.7-alpine
-RUN pip install --no-cache-dir pipenv==2018.11.26
-RUN addgroup -g 1000 pipenv \
-  && adduser -u 1000 -G pipenv -s /bin/sh -D pipenv
+FROM python:3.7-slim-buster
+RUN apt-get update \
+ && apt-get install -y \
+        build-essential \
+ && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir pipenv==2020.6.2
+RUN groupadd -g 1000 pipenv \
+ && useradd -m -u 1000 -g pipenv pipenv
 
 WORKDIR /app
 USER pipenv
