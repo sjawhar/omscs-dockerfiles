@@ -35,10 +35,12 @@ FROM sjawhar/pipenv as packages
 USER root
 WORKDIR /scratch
 COPY app/Pipfile app/Pipfile.lock ./
-RUN PIP_TARGET=/scratch/packages PIP_IGNORE_INSTALLED=1 pipenv install --system
+ARG PACKAGES_DIR=/scratch/packages
+RUN PIP_PREFIX=${PACKAGES_DIR} \
+    PIP_IGNORE_INSTALLED=1 \
+    pipenv install --system --deploy --ignore-pipfile
 
 FROM $PROD_IMAGE
-ARG PACKAGES_DIR=/opt/site-packages
-COPY --from=packages /scratch/packages $PACKAGES_DIR
-ENV PYTHONPATH=$PYTHONPATH:$PACKAGES_DIR
+ARG PACKAGES_DIR=/scratch/packages
+COPY --from=packages ${PACKAGES_DIR} /usr/local
 ```
