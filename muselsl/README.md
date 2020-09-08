@@ -6,10 +6,9 @@ muselsl()
     local DOCKER_XAUTH=/tmp/.docker.xauth
     local DOCKER_XSOCK=/tmp/.X11-unix
 
-    docker run -it \
+    docker run --rm -it \
         --env DISPLAY \
         --env "XAUTHORITY=${DOCKER_XAUTH}" \
-        --name muselsl \
         --net host \
         --privileged \
         --volume "$(pwd):/app" \
