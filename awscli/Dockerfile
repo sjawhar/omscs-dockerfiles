@@ -1,23 +1,20 @@
-FROM alpine:3.12
-RUN apk add --no-cache \
-        docker=19.03.11-r0 \
-        groff=1.22.4-r0 \
-        py3-colorama=0.4.3-r0 \
-        py3-requests=2.23.0-r0 \
-        python3=3.8.3-r0
-RUN apk add --no-cache --virtual build-dependencies \
-        gcc \
-        musl-dev \
-        py3-pip \
-        python3-dev \
- && pip3 install --no-cache-dir \
-        aws-sam-cli==0.52.0 \
-        awscli==1.18.73 \
- && apk del build-dependencies
+FROM debian:buster
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+        groff \
+        less \
+ && rm -rf /var/lib/apt/lists/*
 
-RUN adduser -D aws
+COPY --from=amazon/aws-cli:2.0.56 /usr/local/aws-cli/v2/current /usr/local
 
-WORKDIR /aws
+RUN addgroup --gid 1000 aws \
+ && adduser \
+    --disabled-password \
+    --gecos nte \
+    --gid 1000 \
+    --uid 1000 \
+    aws
+
 USER aws
 ENTRYPOINT ["aws"]
 CMD ["help"]

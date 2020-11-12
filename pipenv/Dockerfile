@@ -1,9 +1,9 @@
-FROM python:3.7.9-slim-buster
+FROM python:3.8.6-slim-buster
 RUN apt-get update \
  && apt-get install -y \
         build-essential \
  && rm -rf /var/lib/apt/lists/*
-RUN pip install --no-cache-dir pipenv==2020.8.13
+RUN pip install --no-cache-dir pipenv==2020.11.4
 RUN groupadd -g 1000 pipenv \
  && useradd -m -u 1000 -g pipenv pipenv
 
