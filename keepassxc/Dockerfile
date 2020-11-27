@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 RUN apt-get update \
  && apt-get install -y \
-      keepassxc=2.6.0+dfsg.1-1 \
+      keepassxc=2.6.2+dfsg.1-1 \
  && rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -g 1000 keepassxc \
