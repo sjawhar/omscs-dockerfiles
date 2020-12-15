@@ -5,7 +5,7 @@ RUN apt-get update \
         less \
  && rm -rf /var/lib/apt/lists/*
 
-COPY --from=amazon/aws-cli:2.0.56 /usr/local/aws-cli/v2/current /usr/local
+COPY --from=amazon/aws-cli:2.1.10 /usr/local/aws-cli/v2/current /usr/local
 
 RUN addgroup --gid 1000 aws \
  && adduser \
