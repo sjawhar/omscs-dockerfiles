@@ -44,7 +44,7 @@ python-apt===0.9.3.5ubuntu2
 python-dateutil==2.6.0
 python-debian===0.1.21-nmu2ubuntu2
 pytz==2016.10
-PyYAML==5.1
+PyYAML==5.4
 requests==2.20.0
 requests-toolbelt==0.7.0
 scipy==0.18.1
