@@ -30,7 +30,7 @@ git+https://github.com/mapillary/OpenSfM.git@v0.1.0
 PAM==0.4.2
 Pillow==6.2.0
 prettytable==0.7.2
-py==1.4.32
+py==1.10.0
 pyasn1==0.1.9
 pycrypto==2.6.1
 pycurl==7.19.3
